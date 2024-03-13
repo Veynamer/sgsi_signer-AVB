@@ -26,7 +26,7 @@ jobs:
       run: |
         # Ваш sh-скрипт здесь
         # Например, если ваш скрипт сохранён в репозитории под именем sign-image.sh:
-        git clone https://github.com/Veynamer/sgsi_signer-AVB -b sign-avb
+        git clone https://github.com/Veynamer/sgsi_signer-AVB sign-avb -b main
         chmod +x ./sign-avb/sign-image.sh
         ./sign-avb/sign-image.sh
 
