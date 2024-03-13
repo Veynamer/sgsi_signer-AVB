@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Установите URL архива
-ARCHIVE_URL="http://example.com/path/to/your/archive.gz"
+ARCHIVE_URL="https://sourceforge.net/projects/nippongsi/files/MIUI%20-%20MIUI-EU-[14.0.6]-sunstone-b%20-%20K8BOY6OAT7/MIUI-EU-[14.0.6]-sunstone-b-AB-13-20230724-NipponGSI.img.gz"
 
 # Установите пути к ключам
-PRIVATE_KEY_PATH="path/to/your/private_key.pem"
-PUBLIC_KEY_METADATA_PATH="path/to/your/public_key_metadata.bin"
+PRIVATE_KEY_PATH="sign-avb/private_key_rsa2048.pem"
+PUBLIC_KEY_METADATA_PATH="sign-avb/public_key_metadata.bin"
 
 # Загрузите архив
 wget "$ARCHIVE_URL" -O temp_archive
