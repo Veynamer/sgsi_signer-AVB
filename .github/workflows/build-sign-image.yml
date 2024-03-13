@@ -22,21 +22,12 @@ jobs:
         sudo apt-get install -y android-sdk-libsparse-utils
 
     # Добавьте ваш шелл-скрипт, который нужно выполнить
-    - name: Download and unpack the image
-      run: |
-        sudo wget -O image-archive.zip https://example.com/path/to/image-archive.zip
-        sudo unzip image-archive.zip
-    
     - name: Run signing script
-      env:
-        ARCHIVE_URL: ${{ secrets.ARCHIVE_URL }}
-        PRIVATE_KEY_PATH: ${{ secrets.PRIVATE_KEY_PATH }}
-        PUBLIC_KEY_METADATA_PATH: ${{ secrets.PUBLIC_KEY_METADATA_PATH }}
       run: |
         # Ваш sh-скрипт здесь
         # Например, если ваш скрипт сохранён в репозитории под именем sign-image.sh:
-        chmod +x ./path/to/your/sign-image.sh
-        ./path/to/your/sign-image.sh
+        chmod +x ./sgsi_signer-AVB/sgsi_signer-AVB/sign-image.sh
+        ./sgsi_signer-AVB/sgsi_signer-AVB/sign-image.sh
 
     # Опционально, вы можете загружать подписанный образ на GitHub Artifacts или в релиз
     - name: Upload signed image
